@@ -1,0 +1,17 @@
+[package]
+name = "substrate-test-runtime-client"
+version = "2.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+edition = "2018"
+
+[dependencies]
+block-builder = { package = "sc-block-builder", git = "https://github.com/ProChain/substrate.git" }
+generic-test-client = { package = "substrate-test-client", git = "https://github.com/ProChain/substrate.git" }
+primitives = { package = "sp-core", git = "https://github.com/ProChain/substrate.git" }
+runtime = { package = "substrate-test-runtime", path = "../../runtime" }
+sp-runtime = { git = "https://github.com/ProChain/substrate.git" }
+sp-blockchain = { git = "https://github.com/ProChain/substrate.git" }
+codec = { package = "parity-scale-codec", version = "1.0.0" }
+client-api = { package = "sc-client-api", git = "https://github.com/ProChain/substrate.git" }
+client = { package = "sc-client", git = "https://github.com/ProChain/substrate.git" }
+futures = "0.3.1"

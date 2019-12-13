@@ -1,0 +1,20 @@
+{
+  "name": "calculate-ids",
+  "version": "1.0.0",
+  "description": "prochain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "get-json": "^1.0.1",
+    "hex": "^0.1.0",
+    "json": "^9.0.6",
+    "request": "^2.88.0",
+    "sha": "^3.0.0",
+    "sha3": "^2.0.7",
+    "web3": "^1.2.4"
+  }
+}
