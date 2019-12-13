@@ -1,0 +1,25 @@
+[package]
+name = "substrate-frame-rpc-system"
+version = "2.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+edition = "2018"
+
+[dependencies]
+client = { package = "sc-client", git = "https://github.com/ProChain/substrate.git" }
+codec = { package = "parity-scale-codec", version = "1.0.0" }
+futures = "0.3.1"
+jsonrpc-core = "14.0.3"
+jsonrpc-core-client = "14.0.3"
+jsonrpc-derive = "14.0.3"
+log = "0.4.8"
+serde = { version = "1.0.101", features = ["derive"] }
+sp-runtime = { git = "https://github.com/ProChain/substrate.git" }
+frame-system-rpc-runtime-api = { git = "https://github.com/ProChain/substrate.git" }
+sp-core = { git = "https://github.com/ProChain/substrate.git" }
+sp-blockchain = { git = "https://github.com/ProChain/substrate.git" }
+txpool-api = { package = "sp-transaction-pool-api", git = "https://github.com/ProChain/substrate.git" }
+
+[dev-dependencies]
+test-client = { package = "substrate-test-runtime-client", git = "https://github.com/ProChain/substrate.git" }
+env_logger = "0.7.0"
+txpool = { package = "sc-transaction-pool", git = "https://github.com/ProChain/substrate.git" }

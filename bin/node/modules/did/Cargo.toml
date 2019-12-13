@@ -1,0 +1,47 @@
+[package]
+name = "did"
+version = "0.1.0"
+authors = ["qc90 <qc90@foxmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# third-party dependencies
+codec = { package = "parity-scale-codec", version = "1.0.6", default-features = false, features = ["derive"] }
+integer-sqrt = { version = "0.1.2" }
+safe-mix = { version = "1.0", default-features = false }
+rustc-hex = { version = "2.0", optional = true }
+serde = { version = "1.0.102", optional = true }
+
+# primitives
+node-primitives = { path = "../../primitives", default-features = false }
+primitives = { package = "sp-core",  git = "https://github.com/ProChain/substrate.git", default-features = false }
+rstd = { package = "sp-std", git = "https://github.com/ProChain/substrate.git", default-features = false }
+sp-runtime = { git = "https://github.com/ProChain/substrate.git", default-features = false }
+
+# frame dependencies
+balances = { package = "pallet-balances", git = "https://github.com/ProChain/substrate.git", default-features = false }
+support = { package = "frame-support", git = "https://github.com/ProChain/substrate.git", default-features = false }
+system = { package = "frame-system", git = "https://github.com/ProChain/substrate.git", default-features = false }
+timestamp = { package = "pallet-timestamp", git = "https://github.com/ProChain/substrate.git", default-features = false }
+runtime-io = { package = "sp-io", git = "https://github.com/ProChain/substrate.git", default-features = false }
+
+[dev-dependencies]
+
+
+[features]
+default = ["std"]
+std = [
+	"balances/std",
+	"codec/std",
+	"primitives/std",
+	"rstd/std",
+	"rustc-hex",
+	"serde",
+	"sp-runtime/std",
+	"support/std",
+	"system/std",
+	"timestamp/std",
+]
+
